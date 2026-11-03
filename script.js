@@ -1,4 +1,4 @@
-let currentLang = "en";
+let currentLang = "fi";
 
 function setLanguage(lang) {
   if (!translations[lang]) return;
@@ -19,13 +19,8 @@ function setLanguage(lang) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Detect browser language if available
-  const navLang = navigator.language ? navigator.language.slice(0, 2) : "en";
-  if (["en", "fi", "ru"].includes(navLang)) {
-    setLanguage(navLang);
-  } else {
-    setLanguage("en");
-  }
+  // Default to Finnish
+  setLanguage("fi");
 
   document.querySelectorAll(".lang-btn").forEach(btn => {
     btn.addEventListener("click", () => {

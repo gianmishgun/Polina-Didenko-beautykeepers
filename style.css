@@ -60,7 +60,6 @@ header {
   height: 44px;
   width: auto;
   object-fit: contain;
-  filter: brightness(0) saturate(100%) invert(27%) sepia(25%) saturate(600%) hue-rotate(158deg) brightness(85%);
 }
 
 .logo-text {

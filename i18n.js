@@ -9,7 +9,7 @@ const translations = {
     book_now: "Book Appointment",
     
     hero_badge: "Beauty & Care in Helsinki",
-    hero_title: "Beautykeepers by Polina Didenko",
+    hero_title: "Beautykeepers",
     hero_subtitle: "Attentive. Joyful. Capable. Premium hair care, coloring, and salon services tailored for individuals and B2B partners in Helsinki.",
     hero_cta_booking: "Book via BookSalon",
     hero_cta_b2b: "B2B Collaboration",
@@ -24,12 +24,16 @@ const translations = {
     
     services_title: "Our Services",
     services_subtitle: "Professional treatments crafted with premium materials",
-    service_1_title: "Haircuts & Styling",
-    service_1_desc: "Precision cuts, women's & men's styling tailored to your individual look and hair structure.",
-    service_2_title: "Coloring & Highlight",
-    service_2_desc: "Complex coloring, airtouch, balayage, toner correction, and scalp-safe gentle lightening.",
-    service_3_title: "Hair & Scalp Therapy",
-    service_3_desc: "Deep oil therapy, detox scalp care, and reconstructive hair treatments for health & shine.",
+    service_1_name: "✨ Anti-Stress Visit",
+    service_1_tagline: '1 hour "Anti-Stress Visit" to make it a part of your life.',
+    service_1_desc: "1 hour of Beautykeeping is exactly what your Dreamlover would do for you. Enjoy a relaxing head massage with magic lotion to release stiffness and stress, followed by a gentle wash and lovely, fulfilling everyday styling for your waves. The same amount of time is needed for a haircut.",
+    service_1_options: "fresh cut for short, medium, long and style-change haircut.",
+    service_2_name: "⏳ Me Time",
+    service_2_tagline: "2 hours of deep treatment or cut & color refreshment.",
+    service_2_desc: "My first recommendation to feel and look good and safe every month. Oil therapy or simple coloring and fresh cut. A good break to look at yourself in the mirror and remind yourself who you are. Talking or silent... to get the proper treat!",
+    service_3_name: "🦋 Change",
+    service_3_tagline: "3 hours of Beautykeeping.",
+    service_3_desc: "Blond service or a complete personal makeover tailored to your personality type. If you are stuck, bored, or questioning your routine, choose this to step into a completely new version of your appearance. Trust and lean on your stylist.",
     
     b2b_title: "B2B Partnerships & Services",
     b2b_subtitle: "Collaborate with Beautykeepers for corporate packages and hair care events",
@@ -40,7 +44,7 @@ const translations = {
     reviews_title: "Google Maps Reviews",
     reviews_subtitle: "What our clients say about us",
     
-    gallery_title: "Portfolio & Salon Atmosphere",
+    gallery_title: "Portfolio",
     gallery_subtitle: "Real results and workplace aesthetics",
     
     contact_title: "Visit Us",
@@ -51,7 +55,7 @@ const translations = {
     contact_booking_label: "Online Booking",
     contact_booking_val: "Booksalon Profile",
 
-    footer_rights: "Beautykeepers by Polina Didenko. All rights reserved."
+    footer_rights: "Beautykeepers. All rights reserved."
   },
   fi: {
     nav_about: "Meistä",
@@ -63,7 +67,7 @@ const translations = {
     book_now: "Varaa Aika",
     
     hero_badge: "Kauneutta ja Hiushuoltoa Helsingissä",
-    hero_title: "Beautykeepers – Polina Didenko",
+    hero_title: "Beautykeepers",
     hero_subtitle: "Huolellinen. Iloinen. Osaava. Premium-tason hiusten värjäys, leikkaukset ja hiusshoidot yksityis- sekä B2B-asiakkaille.",
     hero_cta_booking: "Varaa BookSalonissa",
     hero_cta_b2b: "B2B-Yhteistyö",
@@ -78,12 +82,16 @@ const translations = {
     
     services_title: "Palvelumme",
     services_subtitle: "Ammattitaitoiset hoidot laadukkailla tuotteilla",
-    service_1_title: "Hiustenleikkaukset & Muotoilu",
-    service_1_desc: "Tarkat leikkaukset naisille ja miehille yksilöllisen tyylisi mukaan.",
-    service_2_title: "Värjäykset & Raidoitukset",
-    service_2_desc: "Monivärit, Airtouch, Balayage, sävytykset ja hellävaraiset vaalennukset.",
-    service_3_title: "Hiusten ja Hiuspohjan Hoidot",
-    service_3_desc: "Syvävaikutteiset öljyhoidot, hiuspohjan kuorinta ja hiusten jälleenrakennus.",
+    service_1_name: "✨ Anti-Stress Visit",
+    service_1_tagline: '1 tunnin "Anti-Stress Visit" — tee se osaksi elämääsi.',
+    service_1_desc: "1 tunti Beautykeeping-hoitoa on juuri se, mitä unelmiesi kumppani tekisi sinulle. Nauti rentouttavasta päänsäähkosta taikaliuoksella, joka poistaa jäykkyyden ja stressin, sen jälkeen hellävarainen hiuspesu ja kaunis, täyttävä arkityyli kiharoillesi. Saman verran aikaa kuluu myös hiustenleikkaukseen.",
+    service_1_options: "raikas leikkaus lyhyille, keskipitkille ja pitkille hiuksille sekä tyylinmuutosleikkaus.",
+    service_2_name: "⏳ Me Time",
+    service_2_tagline: "2 tuntia syvähoitoa tai leikkaus ja värin virkistys.",
+    service_2_desc: "Ensimmäinen suositukseni, jotta voit tuntea ja näyttää hyvältä ja turvalliselta joka kuukausi. Öljyhoito tai yksinkertainen värjäys ja raikas leikkaus. Hyvä tauko katsoaksesi itseäsi peilissä ja muistuttaaksesi itseäsi kuka olet. Puhumalla tai hiljaa... saadaksesi oikean hoidon!",
+    service_3_name: "🦋 Change",
+    service_3_tagline: "3 tuntia Beautykeeping-hoitoa.",
+    service_3_desc: "Blondipalvelu tai täydellinen henkilökohtainen muutos, joka on räätälöity persoonallisuustyyliisi. Jos olet jumissa, kyllästynyt tai kyseenalaistat rutiinejasi, valitse tämä astuaksesi täysin uuteen versioon ulkonäöstäsi. Luota ja nojaa kampaajaasi.",
     
     b2b_title: "B2B-Yhteistyö ja Yrityspalvelut",
     b2b_subtitle: "Tee yhteistyötä tarjotaksesi yrityksellesi tai tiimillesi laadukkaita palveluita",
@@ -94,7 +102,7 @@ const translations = {
     reviews_title: "Google Maps -Arvostelut",
     reviews_subtitle: "Mitä asiakkaamme sanovat meistä",
     
-    gallery_title: "Portfolio ja Salongin Tunnelma",
+    gallery_title: "Portfolio",
     gallery_subtitle: "Aitoja työntuloksia ja esteettistä ilmapiiriä",
     
     contact_title: "Tule Vierailulle",
@@ -105,7 +113,7 @@ const translations = {
     contact_booking_label: "Verkkovaraus",
     contact_booking_val: "Booksalon Profiili",
 
-    footer_rights: "Beautykeepers by Polina Didenko. Kaikki oikeudet pidätetään."
+    footer_rights: "Beautykeepers. Kaikki oikeudet pidätetään."
   },
   ru: {
     nav_about: "О нас",
@@ -117,7 +125,7 @@ const translations = {
     book_now: "Записаться",
     
     hero_badge: "Красота и уход в Хельсинки",
-    hero_title: "Beautykeepers by Polina Didenko",
+    hero_title: "Beautykeepers",
     hero_subtitle: "Внимательно. Радостно. Умело. Премиальный уход за волосами, сложное окрашивание и салонные услуги для частных и B2B клиентов.",
     hero_cta_booking: "Запись через BookSalon",
     hero_cta_b2b: "B2B Сотрудничество",
@@ -132,12 +140,16 @@ const translations = {
     
     services_title: "Наши Услуги",
     services_subtitle: "Профессиональные процедуры с использованием лучших материалов",
-    service_1_title: "Стрижки и Укладки",
-    service_1_desc: "Точные женские и мужские стрижки, повседневные и вечерние укладки.",
-    service_2_title: "Окрашивание и Тонирование",
-    service_2_desc: "Сложные техники (Airtouch, Balayage), коррекция цвета и бережный выход из темного.",
-    service_3_title: "Терапия и Восстановление",
-    service_3_desc: "Глубокая масляная терапия, спа-уход за кожей головы и реконструкция структуры волоса.",
+    service_1_name: "✨ Anti-Stress Visit",
+    service_1_tagline: '1 час "Anti-Stress Visit" — сделай это частью своей жизни.',
+    service_1_desc: "1 час Beautykeeping — это именно то, что сделал бы твой любимый человек. Наслаждайся расслабляющим массажем головы с волшебным лосьоном, снимающим напряжение и стресс, затем нежное мытьё и красивая, наполняющая повседневная укладка для твоих волн. Столько же времени занимает стрижка.",
+    service_1_options: "свежая стрижка для коротких, средних, длинных волос и смена стиля.",
+    service_2_name: "⏳ Me Time",
+    service_2_tagline: "2 часа глубокого ухода или стрижка и обновление цвета.",
+    service_2_desc: "Моя первая рекомендация, чтобы чувствовать и выглядеть хорошо каждый месяц. Масляная терапия или простое окрашивание и свежая стрижка. Хороший перерыв, чтобы посмотреть на себя в зеркало и напомнить себе, кто ты. Разговорчивый или тихий... получи заслуженный уход!",
+    service_3_name: "🦋 Change",
+    service_3_tagline: "3 часа Beautykeeping.",
+    service_3_desc: "Блонд-услуга или полная трансформация образа, подобранная под твой тип личности. Если ты застрял, скучаешь или сомневаешься в своём рутинном образе — выбери это, чтобы войти в совершенно новую версию своего внешнего вида. Доверься и опирайся на своего стилиста.",
     
     b2b_title: "B2B Услуги и Партнерство",
     b2b_subtitle: "Сотрудничество для бизнеса: корпоративные программы и обслуживание мероприятий",
@@ -148,7 +160,7 @@ const translations = {
     reviews_title: "Отзывы с Google Карт",
     reviews_subtitle: "Что говорят о нас наши клиенты",
     
-    gallery_title: "Портфолио и Атмосфера",
+    gallery_title: "Портфолио",
     gallery_subtitle: "Реальные работы и уютная атмосфера студии",
     
     contact_title: "Как нас найти",
@@ -159,6 +171,6 @@ const translations = {
     contact_booking_label: "Онлайн-запись",
     contact_booking_val: "Профиль BookSalon",
 
-    footer_rights: "Beautykeepers by Polina Didenko. Все права защищены."
+    footer_rights: "Beautykeepers. Все права защищены."
   }
 };

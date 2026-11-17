@@ -1,63 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beautykeepers | Beauty Salon Helsinki</title>
-  <meta name="description" content="Attentive hair care, complex coloring, oil treatments, and B2B beauty services in Helsinki.">
+  <title>Beautykeepers | La Biosthétique -hiustenhoitoa Helsingissä</title>
+  <meta name="description" content="Yksilöllistä hiustenhoitoa, värjäyksiä ja kampaamopalveluja La Biosthétique -tuotteilla yksityis- ja yritysasiakkaille Helsingissä.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="top">
 
   <!-- Header / Navigation -->
   <header>
     <div class="container navbar">
-      <a href="#" class="logo">
-        <img src="beautykeepers.png" alt="Beautykeepers Logo">
+      <a href="#top" class="logo" aria-label="Beautykeepers">
+        <img src="beautykeepers.png" alt="Beautykeepers Logo" width="773" height="66">
       </a>
 
       <div class="header-right">
-        <div class="lang-switch">
-          <button class="lang-btn" data-lang="en">EN</button>
-          <button class="lang-btn" data-lang="fi">FI</button>
-          <button class="lang-btn" data-lang="ru">RU</button>
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" class="lang-btn" data-lang="en" aria-label="English" aria-pressed="false">EN</button>
+          <button type="button" class="lang-btn active" data-lang="fi" aria-label="Suomi" aria-pressed="true">FI</button>
+          <button type="button" class="lang-btn" data-lang="ru" aria-label="Русский" aria-pressed="false">RU</button>
         </div>
-        <a href="https://booksalon.fi/polina-didenko-beautykeepers" target="_blank" class="btn-primary" data-i18n="book_now">Book Appointment</a>
+        <a href="https://booksalon.fi/polina-didenko-beautykeepers" target="_blank" rel="noopener noreferrer" class="btn-primary" data-i18n="book_now">Varaa Aika</a>
       </div>
     </div>
   </header>
 
   <!-- Hero Section -->
+  <main>
   <section class="hero">
+    <div class="hero-background" aria-hidden="true">
+      <span class="hero-background-image hero-background-image-1"></span>
+      <span class="hero-background-image hero-background-image-2"></span>
+      <span class="hero-background-image hero-background-image-3"></span>
+      <span class="hero-background-image hero-background-image-4"></span>
+    </div>
     <div class="container">
-      <span class="hero-badge" data-i18n="hero_badge">Beauty & Care in Helsinki</span>
+      <span class="hero-badge" data-i18n="hero_badge">Kauneutta ja Hiushuoltoa Helsingissä</span>
       <h1 data-i18n="hero_title">Beautykeepers</h1>
-      <p data-i18n="hero_subtitle">Attentive. Joyful. Capable. Premium hair care, coloring, and salon services in Helsinki.</p>
+      <p data-i18n="hero_subtitle">Huolellinen. Iloinen. Osaava. Laadukasta hiustenhoitoa, värjäyksiä ja kampaamopalveluja yksityis- ja yritysasiakkaille Helsingissä.</p>
       
+      <div class="hero-brand">
+        <span data-i18n="hero_brand_label">Hoitofilosofiamme ytimessä</span>
+        <strong>Beautykeepers × La Biosthétique</strong>
+        <p data-i18n="hero_brand_text">La Biosthétique on tärkein ammattilaistuotemerkkimme hiustenhoidossa, värjäyksissä ja muotoilussa.</p>
+      </div>
+
       <div class="hero-btns">
-        <a href="https://booksalon.fi/polina-didenko-beautykeepers" target="_blank" class="btn-primary" data-i18n="hero_cta_booking">Book via BookSalon</a>
-        <a href="#b2b" class="btn-secondary" data-i18n="hero_cta_b2b">B2B Collaboration</a>
+        <a href="https://booksalon.fi/polina-didenko-beautykeepers" target="_blank" rel="noopener noreferrer" class="btn-primary" data-i18n="hero_cta_booking">Varaa BookSalonissa</a>
+        <a href="#b2b" class="btn-secondary" data-i18n="hero_cta_b2b">B2B-Yhteistyö</a>
       </div>
 
       <div class="hero-logo-block">
-        <img src="Analysis output 4.png" alt="Beautykeepers" class="hero-logo-img">
+        <img src="Analysis output 4.png" alt="Beautykeepers" class="hero-logo-img" width="1418" height="1843">
       </div>
 
       <div class="stats-grid">
         <div class="stat-card">
           <h3>17+</h3>
-          <p data-i18n="stat_experience">Years of Experience</p>
+          <p data-i18n="stat_experience">Vuoden kokemus</p>
         </div>
         <div class="stat-card">
           <h3>4.6 ★</h3>
-          <p data-i18n="stat_rating">Google Rating</p>
+          <p data-i18n="stat_rating">Google-arvosana</p>
         </div>
         <div class="stat-card">
           <h3>1000+</h3>
-          <p data-i18n="stat_clients">Satisfied Clients</p>
+          <p data-i18n="stat_clients">Tyytyväistä asiakasta</p>
         </div>
       </div>
     </div>
@@ -67,31 +80,31 @@
   <section id="services">
     <div class="container">
       <div class="section-header">
-        <h2 data-i18n="services_title">Our Services</h2>
-        <p data-i18n="services_subtitle">Professional treatments crafted with premium materials</p>
+        <h2 data-i18n="services_title">Palvelumme</h2>
+        <p data-i18n="services_subtitle">Ammattitaitoista hiustenhoitoa, värjäystä ja muotoilua La Biosthétique -tuotteilla</p>
       </div>
 
       <div class="services-grid">
         <div class="service-card">
           <div class="service-price-tag">€107</div>
           <h3 class="service-name" data-i18n="service_1_name">✨ Anti-Stress Visit</h3>
-          <p class="service-tagline" data-i18n="service_1_tagline">1 hour "Anti-Stress Visit" to make it a part of your life.</p>
-          <p class="service-desc" data-i18n="service_1_desc">1 hour of Beautykeeping is exactly what your Dreamlover would do for you. Enjoy a relaxing head massage with magic lotion to release stiffness and stress, followed by a gentle wash and lovely, fulfilling everyday styling for your waves. The same amount of time is needed for a haircut.</p>
-          <p class="service-options"><strong>Options:</strong> <span data-i18n="service_1_options">fresh cut for short, medium, long and style-change haircut.</span></p>
+          <p class="service-tagline" data-i18n="service_1_tagline">1 tunnin "Anti-Stress Visit" — tee se osaksi elämääsi.</p>
+          <p class="service-desc" data-i18n="service_1_desc">Tunti Beautykeeping-hoitoa on kuin läheisen ihmisen huolenpitoa. Nauti rentouttavasta päähieronnasta ja hoitavasta hiusvedestä, joka lievittää jännitystä ja stressiä. Sen jälkeen vuorossa ovat hellävarainen pesu ja kaunis, arkeen sopiva muotoilu. Saman verran aikaa kuluu myös hiustenleikkaukseen.</p>
+          <p class="service-options"><strong data-i18n="service_options_label">Vaihtoehdot:</strong> <span data-i18n="service_1_options">raikas leikkaus lyhyille, keskipitkille ja pitkille hiuksille sekä tyylinmuutosleikkaus.</span></p>
         </div>
 
         <div class="service-card">
           <div class="service-price-tag">€222</div>
           <h3 class="service-name" data-i18n="service_2_name">⏳ Me Time</h3>
-          <p class="service-tagline" data-i18n="service_2_tagline">2 hours of deep treatment or cut &amp; color refreshment.</p>
-          <p class="service-desc" data-i18n="service_2_desc">My first recommendation to feel and look good and safe every month. Oil therapy or simple coloring and fresh cut. A good break to look at yourself in the mirror and remind yourself who you are. Talking or silent... to get the proper treat!</p>
+          <p class="service-tagline" data-i18n="service_2_tagline">2 tuntia syvähoitoa tai leikkaus ja värin virkistys.</p>
+          <p class="service-desc" data-i18n="service_2_desc">Ensimmäinen suositukseni, jotta voit tuntea ja näyttää hyvältä ja turvalliselta joka kuukausi. Öljyhoito tai yksinkertainen värjäys ja raikas leikkaus. Hyvä tauko katsoaksesi itseäsi peilissä ja muistuttaaksesi itseäsi kuka olet. Puhumalla tai hiljaa... saadaksesi oikean hoidon!</p>
         </div>
 
         <div class="service-card">
           <div class="service-price-tag">€333</div>
           <h3 class="service-name" data-i18n="service_3_name">🦋 Change</h3>
-          <p class="service-tagline" data-i18n="service_3_tagline">3 hours of Beautykeeping.</p>
-          <p class="service-desc" data-i18n="service_3_desc">Blond service or a complete personal makeover tailored to your personality type. If you are stuck, bored, or questioning your routine, choose this to step into a completely new version of your appearance. Trust and lean on your stylist.</p>
+          <p class="service-tagline" data-i18n="service_3_tagline">3 tuntia Beautykeeping-hoitoa.</p>
+          <p class="service-desc" data-i18n="service_3_desc">Blondipalvelu tai täydellinen henkilökohtainen muutos, joka on räätälöity persoonallisuustyyliisi. Jos olet jumissa, kyllästynyt tai kyseenalaistat rutiinejasi, valitse tämä astuaksesi täysin uuteen versioon ulkonäöstäsi. Luota ja nojaa kampaajaasi.</p>
         </div>
       </div>
     </div>
@@ -101,22 +114,32 @@
   <section id="gallery">
     <div class="container">
       <div class="section-header">
-        <h2 data-i18n="gallery_title">Portfolio</h2>
+        <h2 id="gallery-heading" data-i18n="gallery_title">Portfolio</h2>
+        <p data-i18n="gallery_subtitle">Aitoja työntuloksia La Biosthétique -tuotteilla</p>
+      </div>
+      <div class="portfolio-brand">
+        <span class="brand-eyebrow" data-i18n="portfolio_brand_label">Tuotteet työmme taustalla</span>
+        <h3>La Biosthétique</h3>
+        <p data-i18n="portfolio_brand_text">La Biosthétique on tärkein ammattilaistuotemerkkimme yksilöllisestä hiustenhoidosta värjäykseen ja viimeistelyyn. Beautykeepers yhdistää La Biosthétiquen huolelliseen palveluun ja yksilölliseen tyyliin.</p>
       </div>
 
-      <div class="carousel">
-        <div class="carousel-track" id="carouselTrack">
-          <div class="carousel-slide"><img src="images/photos of works/2019-08-30 19-17-32.webp" alt="Work 1" loading="lazy"></div>
-          <div class="carousel-slide"><img src="images/photos of works/2019-11-27 15-51-02.webp" alt="Work 2" loading="lazy"></div>
-          <div class="carousel-slide"><img src="images/photos of works/2017-06-18 00-53-03.JPG" alt="Work 4" loading="lazy"></div>
-          <div class="carousel-slide"><img src="images/photos of works/2018-04-20 16-06-07.JPG" alt="Work 5" loading="lazy"></div>
-          <div class="carousel-slide"><img src="images/photos of works/2019-10-15 20-30-27.webp" alt="Work 6" loading="lazy"></div>
-          <div class="carousel-slide"><img src="images/photos of works/2019-11-01 19-21-56.webp" alt="Work 7" loading="lazy"></div>
-          <div class="carousel-slide"><img src="images/photos of works/Screenshot_2026_10_27_14_38_39_224_org_telegram_messenger_edit.jpg" alt="Work 8" loading="lazy"></div>
+      <div class="carousel" role="region" aria-labelledby="gallery-heading">
+        <div class="carousel-track" id="carouselTrack" tabindex="0" aria-label="Kuvia töistämme. Selaa nuolinäppäimillä tai pyyhkäisemällä." data-i18n-aria-label="carousel_photos">
+          <div class="carousel-slide"><img src="images/photos of works/2019-08-30 19-17-32.webp" alt="Puolipitkät tummat hiukset ja luonnollinen muotoilu" data-i18n-alt="work_1_alt" loading="lazy" decoding="async" width="1035" height="1035"></div>
+          <div class="carousel-slide"><img src="images/photos of works/2019-11-27 15-51-02.webp" alt="Lyhyt kihara hiustenleikkaus" data-i18n-alt="work_2_alt" loading="lazy" decoding="async" width="1035" height="1035"></div>
+          <div class="carousel-slide"><img src="images/photos of works/2017-06-18 00-53-03.JPG" alt="Kukilla koristeltu juhlakampaus" data-i18n-alt="work_3_alt" loading="lazy" decoding="async" width="1035" height="1035"></div>
+          <div class="carousel-slide"><img src="images/photos of works/2018-04-20 16-06-07.JPG" alt="Pitkät suorat kuparinväriset hiukset" data-i18n-alt="work_4_alt" loading="lazy" decoding="async" width="776" height="1035"></div>
+          <div class="carousel-slide"><img src="images/photos of works/2019-10-15 20-30-27.webp" alt="Pitkät vaaleat hiukset pehmeillä laineilla" data-i18n-alt="work_5_alt" loading="lazy" decoding="async" width="1035" height="1035"></div>
+          <div class="carousel-slide"><img src="images/photos of works/2019-11-01 19-21-56.webp" alt="Lyhyt teksturoitu hiustenleikkaus" data-i18n-alt="work_6_alt" loading="lazy" decoding="async" width="1035" height="1035"></div>
+          <div class="carousel-slide"><img src="images/photos of works/Screenshot_2026_10_27_14_38_39_224_org_telegram_messenger_edit.jpg" alt="Pitkät vaaleanpunaiset kiharat" data-i18n-alt="work_7_alt" loading="lazy" decoding="async" width="1009" height="1565"></div>
+          <div class="carousel-slide"><img src="images/photos of works/2020-03-04 10-18-42.webp" alt="Tyylikäs matala nuttura koristeellisella hiuskorulla" data-i18n-alt="work_8_alt" loading="lazy" decoding="async" width="776" height="1035"></div>
         </div>
-        <button class="carousel-btn carousel-prev" id="carouselPrev" aria-label="Previous">&#8592;</button>
-        <button class="carousel-btn carousel-next" id="carouselNext" aria-label="Next">&#8594;</button>
-        <div class="carousel-dots" id="carouselDots"></div>
+        <button hidden type="button" class="carousel-btn carousel-prev" id="carouselPrev" aria-controls="carouselTrack" aria-label="Edelliset kuvat" data-i18n-aria-label="carousel_prev">&#8592;</button>
+        <button hidden type="button" class="carousel-btn carousel-next" id="carouselNext" aria-controls="carouselTrack" aria-label="Seuraavat kuvat" data-i18n-aria-label="carousel_next">&#8594;</button>
+        <div class="carousel-controls" hidden>
+          <div class="carousel-dots" id="carouselDots"></div>
+          <button type="button" class="carousel-toggle" id="carouselToggle" aria-pressed="false" data-i18n="carousel_pause">Keskeytä diaesitys</button>
+        </div>
       </div>
     </div>
   </section>
@@ -125,8 +148,8 @@
   <section id="reviews">
     <div class="container">
       <div class="section-header">
-        <h2 data-i18n="reviews_title">Google Maps Reviews</h2>
-        <p data-i18n="reviews_subtitle">What our clients say about us</p>
+        <h2 data-i18n="reviews_title">Google Maps -Arvostelut</h2>
+        <p data-i18n="reviews_subtitle">Mitä asiakkaamme sanovat meistä</p>
       </div>
 
       <div class="reviews-grid">
@@ -155,39 +178,39 @@
   <section id="contact">
     <div class="container">
       <div class="section-header">
-        <h2 data-i18n="contact_title">Visit Us</h2>
+        <h2 data-i18n="contact_title">Tule Vierailulle</h2>
       </div>
 
       <div class="contact-grid">
         <div class="contact-info">
           <div class="contact-item">
-            <label data-i18n="contact_address_label">Address</label>
+            <span class="contact-label" data-i18n="contact_address_label">Osoite</span>
             <p data-i18n="contact_address_val">Mannerheimintie 124, 00270 Helsinki</p>
           </div>
 
           <div class="contact-item">
-            <label>Phone / WhatsApp</label>
+            <span class="contact-label" data-i18n="contact_phone_label">Puhelin / WhatsApp</span>
             <p><a href="tel:+358408337114">+358 40 833 7114</a></p>
           </div>
 
           <div class="contact-item">
-            <label>Email</label>
+            <span class="contact-label" data-i18n="contact_email_label">Sähköposti</span>
             <p><a href="mailto:beautykeeper69@gmail.com">beautykeeper69@gmail.com</a></p>
           </div>
 
           <div class="contact-item">
-            <label data-i18n="contact_hours_label">Hours</label>
-            <p data-i18n="contact_hours_val">Mon - Sat: By Appointment</p>
+            <span class="contact-label" data-i18n="contact_hours_label">Aukioloajat</span>
+            <p data-i18n="contact_hours_val">Ma - La: Sopimuksen mukaan</p>
           </div>
 
           <div class="contact-item">
-            <label data-i18n="contact_booking_label">Online Booking</label>
-            <p><a href="https://booksalon.fi/polina-didenko-beautykeepers" target="_blank" data-i18n="contact_booking_val">Booksalon Profile</a></p>
+            <span class="contact-label" data-i18n="contact_booking_label">Verkkovaraus</span>
+            <p><a href="https://booksalon.fi/polina-didenko-beautykeepers" target="_blank" data-i18n="contact_booking_val">Booksalon Profiili</a></p>
           </div>
         </div>
 
         <div class="map-container">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1983.3360058728956!2d24.9042971!3d60.1970221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920a23363bd463%3A0x8898129ebf4ca2b0!2sMannerheimintie%20124%2C%2000270%20Helsinki%2C%20Finland!5e0!3m2!1sen!2sfi!4v1700000000000!5m2!1sen!2sfi" allowfullscreen="" loading="lazy"></iframe>
+          <iframe title="Beautykeepers — Mannerheimintie 124, Helsinki" referrerpolicy="strict-origin-when-cross-origin" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1983.3360058728956!2d24.9042971!3d60.1970221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920a23363bd463%3A0x8898129ebf4ca2b0!2sMannerheimintie%20124%2C%2000270%20Helsinki%2C%20Finland!5e0!3m2!1sen!2sfi!4v1700000000000!5m2!1sen!2sfi" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
     </div>
@@ -197,8 +220,8 @@
   <section id="b2b">
     <div class="container">
       <div class="b2b-bottom">
-        <h2 data-i18n="b2b_title">B2B Partnerships & Services</h2>
-        <p data-i18n="b2b_subtitle">Collaborate with Beautykeepers for corporate packages and hair care events</p>
+        <h2 data-i18n="b2b_title">B2B-Yhteistyö ja Yrityspalvelut</h2>
+        <p data-i18n="b2b_subtitle">Tee yhteistyötä tarjotaksesi yrityksellesi tai tiimillesi laadukkaita palveluita</p>
         <div class="b2b-contacts">
           <a href="tel:+358408337114" class="b2b-contact-link">
             <span class="b2b-icon">📞</span>
@@ -213,10 +236,12 @@
     </div>
   </section>
 
+  </main>
+
   <!-- Footer -->
   <footer>
     <div class="container footer-inner">
-      <p>&copy; 2026 <span data-i18n="footer_rights">Beautykeepers. All rights reserved.</span></p>
+      <p>&copy; 2026 <span data-i18n="footer_rights">Beautykeepers. Kaikki oikeudet pidätetään.</span></p>
       <div class="social-links">
         <a href="https://www.facebook.com/beautykeeperpistefi/" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078V12.07h3.047V9.428c0-3.007 1.792-4.668 4.533-4.668 1.312 0 2.686.234 2.686.234v2.953h-1.514c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.493h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
@@ -230,64 +255,5 @@
 
   <script src="i18n.js"></script>
   <script src="script.js"></script>
-  <script>
-    // Auto-advancing carousel
-    const track = document.getElementById('carouselTrack');
-    const slides = track ? track.querySelectorAll('.carousel-slide') : [];
-    const dotsContainer = document.getElementById('carouselDots');
-    let current = 0;
-    let autoTimer;
-
-    function visibleCount() {
-      if (window.innerWidth >= 900) return 3;
-      if (window.innerWidth >= 600) return 2;
-      return 1;
-    }
-
-    function totalSteps() {
-      return Math.ceil(slides.length / visibleCount());
-    }
-
-    function goTo(index) {
-      const count = visibleCount();
-      const max = totalSteps() - 1;
-      current = Math.max(0, Math.min(index, max));
-      const pct = current * (100 / count) * count;
-      track.style.transform = `translateX(-${(current * 100) / visibleCount()}%)`;
-      updateDots();
-    }
-
-    function buildDots() {
-      if (!dotsContainer) return;
-      dotsContainer.innerHTML = '';
-      for (let i = 0; i < totalSteps(); i++) {
-        const d = document.createElement('button');
-        d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-        d.addEventListener('click', () => { goTo(i); resetAuto(); });
-        dotsContainer.appendChild(d);
-      }
-    }
-
-    function updateDots() {
-      if (!dotsContainer) return;
-      dotsContainer.querySelectorAll('.carousel-dot').forEach((d, i) => {
-        d.classList.toggle('active', i === current);
-      });
-    }
-
-    function next() { goTo(current + 1 >= totalSteps() ? 0 : current + 1); }
-    function prev() { goTo(current - 1 < 0 ? totalSteps() - 1 : current - 1); }
-
-    function startAuto() { autoTimer = setInterval(next, 3500); }
-    function resetAuto() { clearInterval(autoTimer); startAuto(); }
-
-    document.getElementById('carouselNext')?.addEventListener('click', () => { next(); resetAuto(); });
-    document.getElementById('carouselPrev')?.addEventListener('click', () => { prev(); resetAuto(); });
-
-    window.addEventListener('resize', () => { buildDots(); goTo(0); });
-
-    buildDots();
-    startAuto();
-  </script>
 </body>
 </html>

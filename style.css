@@ -47,7 +47,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 0;
+  padding-block: 14px;
 }
 
 .logo {
@@ -59,9 +59,9 @@ header {
 }
 
 .logo img {
-  height: 26px;
-  width: auto;
-  max-width: 120px;
+  height: auto;
+  width: 190px;
+  max-width: 100%;
   object-fit: contain;
 }
 
@@ -161,64 +161,27 @@ header {
   overflow: hidden;
 }
 
-/* Атмосфера — анимированный полупрозрачный фон hero-секции */
-.hero::before {
-  content: '';
+/* Four separate layers ensure every atmosphere photo is shown. */
+.hero-background,
+.hero-background-image {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-position: center center;
+  inset: 0;
+  pointer-events: none;
+}
+.hero-background-image {
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: 0.25;
-  z-index: 0;
-  pointer-events: none;
-  animation: heroBgFade 20s infinite;
+  opacity: 0;
+  animation: heroBgFade 32s linear infinite;
 }
-
+.hero-background-image-1 { background-image: url('images/Атмосфера/IMG_20261027_144520.jpg'); }
+.hero-background-image-2 { background-image: url('images/Атмосфера/IMG_20261027_144543.jpg'); animation-delay: -24s; }
+.hero-background-image-3 { background-image: url('images/Атмосфера/IMG_20261027_144625.jpg'); animation-delay: -16s; }
+.hero-background-image-4 { background-image: url('images/Атмосфера/IMG_20261027_144659.jpg'); animation-delay: -8s; }
 @keyframes heroBgFade {
-  0% {
-    opacity: 0;
-    background-image: url('images/Атмосфера/IMG_20261027_144520.jpg');
-  }
-  5% {
-    opacity: 0.25;
-  }
-  25% {
-    opacity: 0.25;
-  }
-  30% {
-    opacity: 0;
-  }
-  35% {
-    opacity: 0;
-    background-image: url('images/Атмосфера/IMG_20261027_144543.jpg');
-  }
-  40% {
-    opacity: 0.25;
-  }
-  60% {
-    opacity: 0.25;
-  }
-  65% {
-    opacity: 0;
-  }
-  70% {
-    opacity: 0;
-    background-image: url('images/Атмосфера/IMG_20261027_144625.jpg');
-  }
-  75% {
-    opacity: 0.25;
-  }
-  95% {
-    opacity: 0.25;
-  }
-  100% {
-    opacity: 0;
-    background-image: url('images/Атмосфера/IMG_20261027_144659.jpg');
-  }
+  0%, 25%, 100% { opacity: 0; }
+  4%, 21% { opacity: 0.25; }
 }
 
 /* Затемняющий оверлей для читаемости текста */
@@ -328,7 +291,7 @@ section {
 /* Services Grid */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
   gap: 24px;
 }
 
@@ -411,34 +374,45 @@ section {
 
 /* Carousel */
 .carousel {
+  --visible-slides: 3;
   position: relative;
-  overflow: hidden;
   border-radius: var(--radius);
 }
 
 .carousel-track {
   display: flex;
-  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  border-radius: var(--radius);
+}
+.carousel-track::-webkit-scrollbar {
+  display: none;
 }
 
 .carousel-slide {
-  flex: 0 0 calc(100% / 3);
+  flex: 0 0 calc(100% / var(--visible-slides));
+  min-width: 0;
+  scroll-snap-align: start;
   padding: 0 8px;
 }
 
 @media (max-width: 900px) {
-  .carousel-slide { flex: 0 0 50%; }
+  .carousel { --visible-slides: 2; }
 }
 
 @media (max-width: 580px) {
-  .carousel-slide { flex: 0 0 100%; }
+  .carousel { --visible-slides: 1; }
 }
 
 .carousel-slide img {
   width: 100%;
+  height: 100%;
+  min-height: 300px;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: center;
+  object-position: center top;
+  background: rgba(255,255,255,0.65);
   border-radius: var(--radius);
   display: block;
   box-shadow: var(--shadow);
@@ -446,7 +420,7 @@ section {
 
 .carousel-btn {
   position: absolute;
-  top: 50%;
+  top: calc((100% - 56px) / 2);
   transform: translateY(-50%);
   background: rgba(255,255,255,0.85);
   color: var(--primary-color);
@@ -476,7 +450,7 @@ section {
   display: flex;
   justify-content: center;
   gap: 8px;
-  margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 .carousel-dot {
@@ -499,7 +473,7 @@ section {
 /* Reviews */
 .reviews-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 24px;
 }
 
@@ -549,11 +523,11 @@ section {
   margin-bottom: 24px;
 }
 
-.contact-item label {
+.contact-label {
   display: block;
   font-size: 0.8rem;
   text-transform: uppercase;
-  color: var(--accent-color);
+  color: var(--primary-color);
   font-weight: 700;
   margin-bottom: 4px;
   letter-spacing: 0.8px;
@@ -692,9 +666,37 @@ footer {
   .stats-grid { grid-template-columns: 1fr; }
   .footer-inner { flex-direction: column; text-align: center; }
   .b2b-bottom { padding: 36px 20px; }
-  .navbar { padding: 10px 0; }
+  .navbar { padding-block: 10px; }
   .header-right { gap: 8px; }
   .btn-primary { padding: 8px 14px; font-size: 0.8rem; }
   .lang-btn { padding: 3px 7px; font-size: 0.7rem; }
-  .logo img { height: 22px; }
+  .logo img { height: auto; width: 150px; }
+}
+
+[hidden] { display: none !important; }
+:focus-visible { outline: 3px solid var(--primary-color); outline-offset: 4px; }
+section[id] { scroll-margin-top: 110px; }
+.hero-brand { max-width: 680px; margin: -12px auto 30px; }
+.hero-brand > span, .brand-eyebrow { display: block; font-size: .78rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+.hero-brand strong { display: block; font-family: 'Playfair Display', serif; font-size: clamp(1.35rem, 4vw, 1.8rem); margin: 8px 0 12px; }
+.hero-brand p { font-size: 1rem; margin-bottom: 0; }
+.portfolio-brand { max-width: 760px; margin: -16px auto 32px; padding: 28px; text-align: center; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius); }
+.portfolio-brand h3 { font-family: 'Playfair Display', serif; font-size: 2rem; margin: 8px 0 12px; }
+.portfolio-brand p { color: var(--text-muted); }
+.carousel-controls { min-height: 56px; display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; padding-top: 16px; }
+.carousel-toggle { font: inherit; font-size: .8rem; color: var(--primary-color); background: transparent; border: 1px solid var(--border-color); border-radius: 20px; padding: 6px 12px; cursor: pointer; }
+.contact-info, .map-container { min-width: 0; }
+.contact-item a, .b2b-contact-link { overflow-wrap: anywhere; }
+.b2b-contact-link { max-width: 100%; min-width: 0; }
+@media (max-width: 580px) {
+  .navbar { flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .header-right { flex-wrap: wrap; justify-content: center; }
+  .logo img { height: auto; width: 150px; }
+  .contact-grid { padding: 24px 18px; gap: 24px; }
+  .b2b-contact-link { font-size: 1rem; padding: 12px 16px; }
+  .hero { padding-top: 55px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .hero-background-image-1 { opacity: .25; }
 }
